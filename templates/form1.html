@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thank you</title>
+</head>
+<body>
+<div class = "container">
+    <h1>Thank you! check your response</h1>
+  </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Questions</th>
+      <th scope="col">Your Response</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for question,answer in response.items %}
+
+      <tr>
+      <td>{{ question }}</td>
+      <td>
+          {% if answer == '0' %}
+          Yes
+          {% elif answer == '1' %}
+          No
+          {% elif answer == '2' %}
+          Maybe
+          {% else %}
+          {{ answer }}
+          {% endif %}
+
+
+      </td>
+      </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% for im in images %}
+<img alt="Embedded Image" src="{{ im }}" >
+
+{% endfor %}
+
+
+</body>
+
+{% endblock %}
+
+
+div.image {
+  width:50px;
+  height:50px;
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA...);
+}

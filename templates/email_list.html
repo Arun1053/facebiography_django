@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Registered_email</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in emails1 %}
+    <tr>
+      <td>{{item}}</td>
+      <td>{% if item in emails2 %}
+          Completed
+          {% else %}
+          pending
+          {% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<!--<div class = "container">-->
+<!--    <h5>{{ item }}</h5>-->
+<!--  </div>-->
+
+
+{% endblock %}
