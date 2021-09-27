@@ -44,16 +44,16 @@ def done(request):
             x = base64.b64decode(img.split(',')[1])
             image = Image.open(io.BytesIO(x))
             image = cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
-            # try:
-            #     obj = DeepFace.analyze(img_path=image)
-            #     z.append(obj['dominant_emotion'])
-            # except:
-            #     pass
-        # print(form ['email'], form['recommed1'], form['recommed2'], form['recommed3'], form['recommed4'], form['recommed5'], form['comment'])
-        # print(z)
+            try:
+                obj = DeepFace.analyze(img_path=image)
+                z.append(obj['dominant_emotion'])
+            except:
+                pass
+        print(form ['email'], form['recommed1'], form['recommed2'], form['recommed3'], form['recommed4'], form['recommed5'], form['comment'])
+        print(z)
 
-        # inst = SurveyResponse(all_in_one=form)
-        # inst.save()
+        inst = SurveyResponse(all_in_one=form)
+        inst.save()
         request.session['resp'] = resp
         request.session['images'] = images
         return JsonResponse({'status':True})
