@@ -81,7 +81,7 @@
 
 <!-- Trigger canvas web API -->
 <div class="controller">
-    <button id="snap">Capture</button>
+    <button id="snap">All the fields are compulsory</button>
 </div>
 
 <!-- Webcam video snapshot -->
@@ -139,6 +139,7 @@ function myFunction(){
 
 $(document).ready(function () {
                 $("#submit").on("click", function() {
+                $(this).attr("disabled", "disabled");
                     var js_data = myFunction();
                     var arun = {};
                     var form = $("form").serializeArray();
@@ -308,7 +309,7 @@ setInterval(function(){
 			</label>
 
 			<!-- multi-line text input control -->
-			<textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+			<textarea name="comment" id="comment" placeholder="If No, type NA"></textarea>
 		</div>
 
 		<!-- Multi-line Text Input Control -->

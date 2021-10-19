@@ -14,3 +14,5 @@ class SurveyResponse(models.Model):
     # que_five = models.CharField(max_length=10, blank=True)
     # comm = models.CharField(max_length=100, blank=True)
 
+class EmotionCaptured(models.Model):
+    dominant_emotion = models.TextField(null=True)

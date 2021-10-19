@@ -1,0 +1,34 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 27, 2021 - 08:56:15
+Django version 3.2.7, using settings 'facebiograph.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[27/Sep/2021 08:56:33] "GET /survey/ HTTP/1.1" 200 6794
+Not Found: /favicon.ico
+[27/Sep/2021 08:56:33] "GET /favicon.ico HTTP/1.1" 404 2896
+[27/Sep/2021 08:56:52] "GET /survey/ HTTP/1.1" 200 6794
+[27/Sep/2021 08:56:56] "GET / HTTP/1.1" 200 2257
+[27/Sep/2021 08:57:03] "GET /survey/ HTTP/1.1" 200 6794
+[27/Sep/2021 08:57:05] "GET /sur_status HTTP/1.1" 200 2791
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 29, 2021 - 05:37:28
+Django version 3.2.7, using settings 'facebiograph.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 29, 2021 - 05:37:47
+Django version 3.2.7, using settings 'facebiograph.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Error: That port is already in use.
+[29/Sep/2021 05:37:53] "GET /survey/ HTTP/1.1" 200 6836
+[29/Sep/2021 05:38:10] "GET /survey/ HTTP/1.1" 200 6836

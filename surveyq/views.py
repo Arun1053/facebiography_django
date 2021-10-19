@@ -8,7 +8,7 @@ from PIL import Image
 import io
 import cv2
 import numpy as np
-from surveyq.models import SurveyResponse
+from surveyq.models import SurveyResponse, EmotionCaptured
 
 
 
@@ -39,6 +39,7 @@ def done(request):
 
 
         z = []
+        z.append(form['email'])
 
         for img in images:
             x = base64.b64decode(img.split(',')[1])
@@ -53,6 +54,8 @@ def done(request):
         print(z)
 
         inst = SurveyResponse(all_in_one=form)
+        emo = EmotionCaptured(dominant_emotion=z)
+        emo.save()
         inst.save()
         request.session['resp'] = resp
         request.session['images'] = images

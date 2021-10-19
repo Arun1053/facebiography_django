@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-xwkhgler%s9fa#+o&con26obwct5np#x*udw2ln4rkal@m4hkc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ac4b-1-186-170-61.ngrok.io',
-                 '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -53,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880
+DATA_UPLOAD_MAX_MEMORY_SIZE = 1111115242880
 
 
 ROOT_URLCONF = 'facebiograph.urls'
